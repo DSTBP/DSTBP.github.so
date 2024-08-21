@@ -3,7 +3,7 @@ import { defineSiteConfig } from 'valaxy'
 export default defineSiteConfig({
   url: 'https://www.dstbp.cn',
   lang: 'zh-CN',
-  title: '狂且狡童 の Blog',                                               // 网站标题、网站标签栏标题
+  title: '微澜尘寰 の Blog',                                               // 网站标题、网站标签栏标题
   subtitle: '',                                                           // 副标题
   description: '你恳求世界不要打扰你的独处，在夜幕降临的时候却又非常孤独。',  // 描述
   favicon: 'https://www.dstbp.com/favicon.svg',                        // 站点图标

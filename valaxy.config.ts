@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: DSTBP
+ * @Date: 2024-08-21 00:35:40
+ * @LastEditTime: 2024-08-21 22:50:30
+ * @LastEditors: DSTBP
+ */
 import { defineValaxyConfig } from 'valaxy'
 import type { UserThemeConfig } from 'valaxy-theme-yun'
 
@@ -17,7 +24,7 @@ export default defineValaxyConfig<UserThemeConfig>({
   themeConfig: {
     banner: {
       enable: true,
-      title: '狂且狡童的鲸岛',
+      title: '微澜尘寰的雾岛',
       cloud: {
         enable: true,
       },
