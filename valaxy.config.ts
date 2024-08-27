@@ -2,13 +2,12 @@
  * @Description: 
  * @Author: DSTBP
  * @Date: 2024-08-21 00:35:40
- * @LastEditTime: 2024-08-27 18:28:57
+ * @LastEditTime: 2024-08-27 18:35:01
  * @LastEditors: DSTBP
  */
 import { defineValaxyConfig } from 'valaxy'
 import type { UserThemeConfig } from 'valaxy-theme-yun'
 import { addonComponents } from 'valaxy-addon-components'
-import { VitePWA } from 'vite-plugin-pwa'
 
 
 const safelist = [
@@ -90,10 +89,10 @@ export default defineValaxyConfig<UserThemeConfig>({
     /**
      * 自定义文章卡片类型
      */
-    types: {
-      color: '#214EC2',
-      icon: 'i-ri-genderless-line',
-    },
+    // types: {
+    //   color: '#214EC2',
+    //   icon: 'i-ri-genderless-line',
+    // },
 
     /**
      * 说点什么
