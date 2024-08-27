@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: DSTBP
  * @Date: 2024-08-21 00:35:40
- * @LastEditTime: 2024-08-27 18:39:51
+ * @LastEditTime: 2024-08-27 18:45:37
  * @LastEditors: DSTBP
  */
 import { defineValaxyConfig } from 'valaxy'
@@ -106,7 +106,7 @@ export default defineValaxyConfig<UserThemeConfig>({
     },
   },
 
-  // 确保了指定的图标类不会被 Unocss 优化掉
+  // 确保指定的图标类不会被 Unocss 优化掉
   unocss: {
     safelist,
   },
