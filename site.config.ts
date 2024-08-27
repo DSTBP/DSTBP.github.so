@@ -3,15 +3,15 @@ import { defineSiteConfig } from 'valaxy'
 export default defineSiteConfig({
   url: 'https://www.dstbp.cn',
   lang: 'zh-CN',
-  title: '微澜尘寰 の Blog',                                               // 网站标题、网站标签栏标题
-  subtitle: '',                                                           // 副标题
-  description: '你恳求世界不要打扰你的独处，在夜幕降临的时候却又非常孤独。',  // 描述
-  favicon: 'https://www.dstbp.com/favicon.svg',                           // 站点图标
+  title: '微澜尘寰 の Blog',                                                  // 网站标题、网站标签栏标题
+  subtitle: '',                                                              // 副标题
+  description: '你恳求世界不要打扰你的独处，在夜幕降临的时候却又非常孤独。',      // 描述
+  favicon: 'https://www.dstbp.com/favicon.svg',                              // 站点图标
   author: {
-      avatar: 'https://www.dstbp.com/images/author/logo.jpg',             // 头像
-      name: 'r0xanne',                                                    // 头像下方名
+      avatar: 'https://www.dstbp.com/images/author/logo.jpg',                // 头像
+      name: 'r0xanne',                                                       // 头像下方名
       status: {
-          emoji: '👩‍💻',                                                    // 当前状态
+          emoji: '👩‍💻',                                                       // 当前状态
       },
   },
   social: [
@@ -65,7 +65,7 @@ export default defineSiteConfig({
     },
     {
       name: '微信公众号',
-      link: 'https://cdn.yunyoujun.cn/img/author/Official_Accounts.jpg',
+      link: 'https://www.dstbp.com/images/author/Official_Accounts.jpg',
       icon: 'i-ri-wechat-2-line',
       color: '#1AAD19',
     },
@@ -96,7 +96,8 @@ export default defineSiteConfig({
   ],
 
   search: {
-    enable: false,
+    enable: true,
+    type: 'fuse',
   },
 
   sponsor: {
@@ -124,4 +125,36 @@ export default defineSiteConfig({
       },
     ],
   },
+
+  /**
+   * 开启阅读统计
+   */
+  statistics: {
+    enable: true,
+        readTime: {
+          speed: {
+            cn: 300,
+            en: 200,
+        },
+    },
+  },
+
+  codeHeightLimit: 500,
+
+  /**
+   * 文章 Frontmatter
+   */
+  frontmatter: {
+    time_warning: false,         // 显示阅读时间提醒
+    // password: "123123"        // 内容加密的密码
+  },
+
+  mediumZoom: { enable: true },  // 图片预览
+
+  /*
+   * 懒加载
+   */
+  vanillaLazyload: {
+    enable: true,
+  }
 })
