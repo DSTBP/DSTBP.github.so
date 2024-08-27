@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: DSTBP
  * @Date: 2024-08-21 00:35:40
- * @LastEditTime: 2024-08-27 18:22:33
+ * @LastEditTime: 2024-08-27 18:28:57
  * @LastEditors: DSTBP
  */
 import { defineValaxyConfig } from 'valaxy'
@@ -109,10 +109,10 @@ export default defineValaxyConfig<UserThemeConfig>({
   },
 
   // 离线使用和缓存
-  vite: {
-    // https://vite-pwa-org.netlify.app/
-    plugins: [VitePWA()],
-  },
+  // vite: {
+  //   // https://vite-pwa-org.netlify.app/
+  //   plugins: [VitePWA()],
+  // },
 
   // 确保了指定的图标类不会被 Unocss 优化掉
   unocss: {
