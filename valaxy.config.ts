@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: DSTBP
  * @Date: 2024-08-21 00:35:40
- * @LastEditTime: 2024-08-27 18:45:37
+ * @LastEditTime: 2024-08-27 18:52:51
  * @LastEditors: DSTBP
  */
 import { defineValaxyConfig } from 'valaxy'
@@ -27,8 +27,6 @@ export default defineValaxyConfig<UserThemeConfig>({
     banner: {
       enable: true,
       title: '微澜尘寰的雾岛',
-      // 手动分割
-      // title: ['微澜尘寰的', '雾岛'],
       cloud: {
         enable: true,     // 首页下方的动态云
       },
@@ -36,7 +34,7 @@ export default defineValaxyConfig<UserThemeConfig>({
 
     // 主题配色
     colors: {
-      primary: '#0078E7'     // @default '#0078E7'
+      primary: '#0078E7'
     },
 
     // background
@@ -48,7 +46,7 @@ export default defineValaxyConfig<UserThemeConfig>({
     },
 
     /**
-     * 自定义页面（显示在社交导航栏下方）
+     * 自定义页面
      */
     pages: [
       {
@@ -81,16 +79,8 @@ export default defineValaxyConfig<UserThemeConfig>({
       powered: true,
       beian: {
         enable: true,
-        icp: '川ICP备12238132号',
+        icp: '萌ICP备12238132号',
       },
-    },
-
-    /**
-     * 自定义文章卡片类型
-     */
-    types: {
-      color: '#214EC2',
-      icon: 'i-ri-genderless-line',
     },
 
     /**
@@ -101,7 +91,7 @@ export default defineValaxyConfig<UserThemeConfig>({
       // api: 'https://www.dstbp.com/api/words',
       hitokoto: {
         enable: true,
-        api: 'https://v1.hitokoto.cn/?c=j&c=k&c=i&encode=json',
+        api: 'https://v1.hitokoto.cn/?&c=i&encode=json',
       }
     },
   },
