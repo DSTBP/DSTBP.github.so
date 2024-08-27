@@ -2,12 +2,11 @@
  * @Description: 
  * @Author: DSTBP
  * @Date: 2024-08-21 00:35:40
- * @LastEditTime: 2024-08-27 18:35:01
+ * @LastEditTime: 2024-08-27 18:39:51
  * @LastEditors: DSTBP
  */
 import { defineValaxyConfig } from 'valaxy'
 import type { UserThemeConfig } from 'valaxy-theme-yun'
-import { addonComponents } from 'valaxy-addon-components'
 
 
 const safelist = [
@@ -89,10 +88,10 @@ export default defineValaxyConfig<UserThemeConfig>({
     /**
      * 自定义文章卡片类型
      */
-    // types: {
-    //   color: '#214EC2',
-    //   icon: 'i-ri-genderless-line',
-    // },
+    types: {
+      color: '#214EC2',
+      icon: 'i-ri-genderless-line',
+    },
 
     /**
      * 说点什么
@@ -107,19 +106,8 @@ export default defineValaxyConfig<UserThemeConfig>({
     },
   },
 
-  // 离线使用和缓存
-  // vite: {
-  //   // https://vite-pwa-org.netlify.app/
-  //   plugins: [VitePWA()],
-  // },
-
   // 确保了指定的图标类不会被 Unocss 优化掉
   unocss: {
     safelist,
   },
-
-  // 扩展插件
-  addons: [
-    addonComponents()
-  ],
 })
