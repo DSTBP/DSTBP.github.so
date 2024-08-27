@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: DSTBP
  * @Date: 2024-08-21 00:35:40
- * @LastEditTime: 2024-08-27 18:52:51
+ * @LastEditTime: 2024-08-27 18:57:47
  * @LastEditors: DSTBP
  */
 import { defineValaxyConfig } from 'valaxy'
@@ -91,7 +91,7 @@ export default defineValaxyConfig<UserThemeConfig>({
       // api: 'https://www.dstbp.com/api/words',
       hitokoto: {
         enable: true,
-        api: 'https://v1.hitokoto.cn/?&c=i&encode=json',
+        api: 'https://v1.hitokoto.cn/?c=j&c=k&c=d&c=i&encode=json',
       }
     },
   },
