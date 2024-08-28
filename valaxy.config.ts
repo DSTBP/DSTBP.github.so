@@ -50,15 +50,15 @@ export default defineValaxyConfig<UserThemeConfig>({
      */
     pages: [
       {
-        name: '我的小伙伴们',
+        name: '友链',
         url: '/links/',
-        icon: 'i-ri-genderless-line',
+        icon: 'i-ri-group-2-line',
         color: 'dodgerblue',
       },
       {
-        name: '喜欢的女孩子',
-        url: '/girls/',
-        icon: 'i-ri-women-line',
+        name: '赞助老板',
+        url: '/sponsor/',
+        icon: 'i-ri-heart-3-line',
         color: 'hotpink',
       },
     ],
