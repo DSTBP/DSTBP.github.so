@@ -1,0 +1,42 @@
+[
+    {
+        "url": "https://s0rry.cn/",
+        "avatar": "https://www.nssctf.cn/files/2024/2/20/61bc635593.jpeg",
+        "name": "s0rry",
+        "blog": "s0rry`s blog",
+        "desc": "Hello,world. l'm coming.",
+        "color": "#90A6BC"
+    },
+    {
+        "url": "https://www.yuque.com/misery333",
+        "avatar": "https://cdn.nlark.com/yuque/0/2024/png/26096065/1717164111025-avatar/3e840cf3-5407-4ff8-b7f0-ad7ba8abea45.png",
+        "name": "M1sery",
+        "blog": "M1sery的博客",
+        "desc": "十一点钟 皓月升空 夜色坠落",
+        "color": "#881B12"
+    },
+    {
+        "url": "https://hybpjx.github.io/",
+        "avatar": "https://cdn.nlark.com/yuque/0/2021/png/12843286/1615948582245-avatar/04758b51-2be2-4434-bd9d-e703587bd068.png",
+        "name": "流转",
+        "blog": "流转's 博客",
+        "desc": "我是始識，也是影17",
+        "color": "#4186C2"
+    },
+    {
+        "url": "https://l-kook.github.io/",
+        "avatar": "https://cdn.nlark.com/yuque/0/2023/png/21637398/1696148863911-avatar/947eb3f7-8a00-4db2-966d-8b7ed71ed454.png",
+        "name": "l-kook",
+        "blog": "l-kookの小窝",
+        "desc": "纯算大神是谁，哦？原来是我",
+        "color": "#00F5FF"
+    },
+    {
+        "url": "https://lpy30m.github.io/skuukzky.github.io/",
+        "avatar": "https://krseoul.imgtbl.com/i/2024/08/23/66c803b67ebec.jpg",
+        "name": "skuukzky",
+        "blog": "skuukzky 的杂货店",
+        "desc": "六边形战士",
+        "color": "#66CCFF"
+    }
+]

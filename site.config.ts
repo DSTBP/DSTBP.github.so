@@ -145,7 +145,7 @@ export default defineSiteConfig({
    * 文章 Frontmatter
    */
   frontmatter: {
-    time_warning: false,         // 显示阅读时间提醒
+    time_warning: true,         // 显示阅读时间提醒
     // password: "123123"        // 内容加密的密码
   },
 

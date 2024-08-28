@@ -1,1 +1,203 @@
-// you can custom css vars here
+// :root {
+//     --hy-c-primary: #1bc9a6;
+//     --hy-c-primary-light: #14d6af;
+//     --hy-c-primary-lighter: #15e8be;
+//     --hy-c-primary-dark: #1aaa8d;
+//     --hy-c-primary-darker: #0b755f;
+//     --hy-c-primary-dimm-1: rgba(27, 201, 166, 0.5);
+//     --hy-c-primary-dimm-2: rgba(27, 201, 166, 0.25);
+//     --hy-c-primary-dimm-3: rgba(27, 201, 166, 0.05);
+
+//     --hy-c-black: #1a1a1a;
+//     --hy-c-black-pure: #000000;
+//     --hy-c-black-soft: #242424;
+//     --hy-c-black-mute: #2f2f2f;
+
+//     --hy-c-white: #ffffff;
+//     --hy-c-white-soft: #f9f9f9;
+//     --hy-c-white-mute: #f1f1f1;
+
+//     --hy-c-gray: #8e8e8e;
+//     --hy-c-gray-light-1: #aeaeae;
+//     --hy-c-gray-light-2: #c7c7c7;
+//     --hy-c-gray-light-3: #d1d1d1;
+//     --hy-c-gray-light-4: #e5e5e5;
+//     --hy-c-gray-light-5: #f2f2f2;
+//     --hy-c-gray-dark-1: #636363;
+//     --hy-c-gray-dark-2: #484848;
+//     --hy-c-gray-dark-3: #3a3a3a;
+//     --hy-c-gray-dark-4: #282828;
+//     --hy-c-gray-dark-5: #202020;
+
+//     --hy-c-divider-light-1: rgba(60, 60, 60, 0.29);
+//     --hy-c-divider-light-2: rgba(60, 60, 60, 0.12);
+//     --hy-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+//     --hy-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+//     --hy-c-text-light-1: var(--hy-c-indigo);
+//     --hy-c-text-light-2: rgba(60, 60, 60, 0.70);
+//     --hy-c-text-light-3: rgba(60, 60, 60, 0.33);
+//     --hy-c-text-light-4: rgba(60, 60, 60, 0.18);
+
+//     --hy-c-text-dark-1: rgba(255, 255, 255, 0.87);
+//     --hy-c-text-dark-2: rgba(235, 235, 235, 0.60);
+//     --hy-c-text-dark-3: rgba(235, 235, 235, 0.38);
+//     --hy-c-text-dark-4: rgba(235, 235, 235, 0.18);
+
+//     --hy-c-indigo: #213547;
+//     --hy-c-indigo-soft: #476582;
+//     --hy-c-indigo-light: #aac8e4;
+//     --hy-c-indigo-lighter: #c9def1;
+//     --hy-c-indigo-dark: #1d2f3f;
+//     --hy-c-indigo-darker: #14212e;
+
+//     --va-c-bg: #fafafa;
+
+//     --un-prose-links: var(--hy-c-primary)
+// }
+
+// .dark {
+//     --hy-c-primary: #8fe6d5;
+//     --hy-c-primary-light: #a8ffee;
+//     --hy-c-primary-lighter: #bafef1;
+//     --hy-c-primary-dark: #66ccb8;
+//     --hy-c-primary-darker: #24a188;
+//     --hy-c-primary-dimm-1: rgba(143, 230, 213, 0.5);
+//     --hy-c-primary-dimm-2: rgba(143, 230, 213, 0.25);
+//     --hy-c-primary-dimm-3: rgba(143, 230, 213, 0.05);
+//     --va-c-bg: #1b1b1f;
+// }
+
+
+// :root {
+//     --hy-c-waves-dimm: var(--va-c-bg);
+//     --hy-c-waves-dimm-1: rgba(255, 255, 255, 0.7);
+//     --hy-c-waves-dimm-2: rgba(255, 255, 255, 0.5);
+//     --hy-c-waves-dimm-3: rgba(255, 255, 255, 0.3);
+// }
+
+// .dark {
+//     --hy-c-waves-dimm-1: rgba(34, 34, 34, 0.7);
+//     --hy-c-waves-dimm-2: rgba(34, 34, 34, 0.5);
+//     --hy-c-waves-dimm-3: rgba(34, 34, 34, 0.3);
+// }
+
+/**
+   * Typography
+   * -------------------------------------------------------------------------- */
+
+// :root {
+//     --hy-font-family-seto: Seto;
+//     --hy-font-family-modesty: Modesty;
+//     --hy-font-family-christmas: MountainsofChristmas;
+//     --hy-font-family-frederick: FrederickatheGreat;
+// }
+
+
+
+:root {
+    // 衬线字体，浏览器会从左到右依次尝试使用这些字体，直到找到一个可用的字体。
+    --va-font-serif: 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto,  serif;
+    // 无衬线字体
+    --va-font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    // 等宽字体
+    --va-font-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+// 自定义字体覆盖
+:root {
+    --va-font-serif: HandWritten;   // 各种标题
+    // 无衬线字体
+    --va-font-sans: Modesty;        // 目录、左侧边栏、底部信息
+    // 无衬线字体
+    --smc-font-sans: Seto;       // 文章内容
+}
+
+
+
+
+
+
+
+
+
+
+/**
+   * Colors Theme
+   * -------------------------------------------------------------------------- */
+
+// :root {
+//     --hy-c-bg: var(--hy-c-white);
+//     --hy-c-bg-soft: var(--hy-c-white-soft);
+//     --hy-c-bg-mute: var(--hy-c-white-mute);
+//     --hy-c-bg-alt: var(--hy-c-white-soft);
+
+//     --hy-c-divider: var(--hy-c-divider-light-1);
+//     --hy-c-divider-light: var(--hy-c-divider-light-2);
+
+//     --hy-c-divider-inverse: var(--hy-c-divider-dark-1);
+//     --hy-c-divider-inverse-light: var(--hy-c-divider-dark-2);
+
+//     --hy-c-text-1: var(--hy-c-text-light-1);
+//     --hy-c-text-2: var(--hy-c-text-light-2);
+//     --hy-c-text-3: var(--hy-c-text-light-3);
+//     --hy-c-text-4: var(--hy-c-text-light-4);
+
+//     --hy-c-text-inverse-1: var(--hy-c-text-dark-1);
+//     --hy-c-text-inverse-2: var(--hy-c-text-dark-2);
+//     --hy-c-text-inverse-3: var(--hy-c-text-dark-3);
+//     --hy-c-text-inverse-4: var(--hy-c-text-dark-4);
+
+//     --hy-c-text-code: var(--hy-c-indigo-soft);
+
+//     --hy-c-brand: var(--hy-c-primary);
+//     --hy-c-brand-light: var(--hy-c-primary-light);
+//     --hy-c-brand-lighter: var(--hy-c-primary-lighter);
+//     --hy-c-brand-dark: var(--hy-c-primary-dark);
+//     --hy-c-brand-darker: var(--hy-c-primary-darker);
+
+//     --va-c-brand: var(--hy-c-brand);
+
+//     --hy-c-sponsor: #fd1d7c;
+// }
+
+// .dark {
+//     --hy-c-bg: var(--hy-c-black-soft);
+//     --hy-c-bg-soft: var(--hy-c-black-mute);
+//     --hy-c-bg-mute: var(--hy-c-gray-dark-3);
+//     --hy-c-bg-alt: var(--hy-c-black);
+
+//     --hy-c-divider: var(--hy-c-divider-dark-1);
+//     --hy-c-divider-light: var(--hy-c-divider-dark-2);
+
+//     --hy-c-divider-inverse: var(--hy-c-divider-light-1);
+//     --hy-c-divider-inverse-light: var(--hy-c-divider-light-2);
+
+//     --hy-c-text-1: var(--hy-c-text-dark-1);
+//     --hy-c-text-2: var(--hy-c-text-dark-2);
+//     --hy-c-text-3: var(--hy-c-text-dark-3);
+//     --hy-c-text-4: var(--hy-c-text-dark-4);
+
+//     --hy-c-text-inverse-1: var(--hy-c-text-light-1);
+//     --hy-c-text-inverse-2: var(--hy-c-text-light-2);
+//     --hy-c-text-inverse-3: var(--hy-c-text-light-3);
+//     --hy-c-text-inverse-4: var(--hy-c-text-light-4);
+
+//     --hy-c-text-code: var(--hy-c-indigo-lighter);
+// }
+
+// :root {
+//     --va-c-primary-light: var(--hy-c-primary-light);
+//     --va-c-primary-lighter: var(--hy-c-primary-lighter);
+//     --va-c-primary-dark: var(--hy-c-primary-dark);
+//     --va-c-primary: var(--hy-c-primary);
+// }
+
+/**
+   * element-plus Theme
+   * -------------------------------------------------------------------------- */
+
+// :root {
+//     --el-color-primary: var(--hy-c-primary) !important;
+//     --el-text-color-primary: var(--hy-c-text-2) !important;
+// }
