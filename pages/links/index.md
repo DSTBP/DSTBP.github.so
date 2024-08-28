@@ -1,4 +1,3 @@
-::: zh-CN
 ---
 title: 我的饭搭子们
 date: 2024-08-28 13:00:00
@@ -8,19 +7,7 @@ comments: true
 links: /friends/links.json
 random: true
 ---
-:::
 
-::: en
----
-title: My Friends
-date: 2024-08-28 13:00:00
-keywords: 链接
-description: DSTBP的小伙伴们
-comments: true
-links: /friends/links.json
-random: true
----
-:::
 
 <YunLinks :links="frontmatter.links" :random="frontmatter.random" />
 
@@ -61,6 +48,7 @@ Please follow the instructions below to submit your friend link application. Tha
 
 Example: 
 :::
+
 
 ```JavaScript
 {
