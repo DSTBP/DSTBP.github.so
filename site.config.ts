@@ -154,7 +154,7 @@ export default defineSiteConfig({
   /*
    * 懒加载
    */
-  vanillaLazyload: {
-    enable: true,
-  }
+  // vanillaLazyload: {
+  //   enable: true,
+  // }
 })
