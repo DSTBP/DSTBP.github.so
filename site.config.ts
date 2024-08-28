@@ -149,6 +149,13 @@ export default defineSiteConfig({
     // password: "123123"        // 内容加密的密码
   },
 
+  /**
+   * 评论
+   */
+  comment: {
+    enable: true,
+  },
+
   mediumZoom: { enable: true },  // 图片预览
 
   /*
