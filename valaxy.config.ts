@@ -52,13 +52,13 @@ export default defineValaxyConfig<UserThemeConfig>({
       {
         name: '友链',
         url: '/links/',
-        icon: 'i-ri-group-2-line',
+        icon: 'i-ri-user-add-line',
         color: 'dodgerblue',
       },
       {
         name: '赞助老板',
         url: '/sponsor/',
-        icon: 'i-ri-heart-3-line',
+        icon: 'i-ri-user-heart-line',
         color: 'hotpink',
       },
     ],
