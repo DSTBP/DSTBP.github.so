@@ -87,12 +87,12 @@ export default defineSiteConfig({
       icon: 'i-ri-mail-line',
       color: '#8E71C1',
     },
-    // {
-    //   name: 'Travelling',
-    //   link: 'https://www.travellings.cn/go.html',
-    //   icon: 'i-ri-train-line',
-    //   color: 'var(--va-c-text)',
-    // },
+    {
+      name: '语雀',
+      link: 'https://www.yuque.com/dstbp',
+      icon: 'i-ri-yuque-line',
+      color: '#3BD47F',
+    },
   ],
 
   search: {
