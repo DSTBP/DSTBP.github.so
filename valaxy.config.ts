@@ -1,10 +1,3 @@
-/*
- * @Description: 
- * @Author: DSTBP
- * @Date: 2024-08-21 00:35:40
- * @LastEditTime: 2024-08-28 14:26:42
- * @LastEditors: DSTBP
- */
 import { defineValaxyConfig } from 'valaxy'
 import type { UserThemeConfig } from 'valaxy-theme-yun'
 
