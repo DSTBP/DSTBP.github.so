@@ -4,7 +4,7 @@ date: 2024-08-28 13:00:00
 keywords: 链接
 description: DSTBP的小伙伴们
 comments: true
-links: https://friends.yunyoujun.cn/links.json
+links: https://www.dstbp.com/friends/links.json
 random: true
 ---
 
