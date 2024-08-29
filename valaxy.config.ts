@@ -97,17 +97,19 @@ export default defineValaxyConfig<UserThemeConfig>({
     addonComponents(),
 
     addonWaline({
-      // Waline 配置项，参考 https://waline.js.org/reference/client/props.html
       serverURL: 'https://dstbp-waline.vercel.app/',
       comment: true,
+      pageview: true,
     }),
 
     addonMeting({
       global: true,
       props: {
-        id: '2063403364',
+        id: '735280582',
         server: 'netease',
-        type: 'song',
+        type: 'playlist',
+        autoplay: false,
+        theme: 'var(--hy-c-primary)'
       },
     }),
 
