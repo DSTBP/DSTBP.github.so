@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: DSTBP
  * @Date: 2024-08-29 14:53:09
- * @LastEditTime: 2024-08-29 14:53:21
+ * @LastEditTime: 2024-08-29 14:59:31
  * @LastEditors: DSTBP
 -->
 <script lang="ts" setup>
@@ -21,7 +21,7 @@ const isPost = useLayout('post')
 <template>
     <YunPostMeta :frontmatter="frontmatter">
         <span v-if="isPost" id="busuanzi_container_page_pv">
-            本文总阅读量 <span id="busuanzi_value_page_pv" /> 次
+            本文总阅读量 <span id="busuanzi_value_site_pv"></span> 次
         </span>
     </YunPostMeta>
 </template>

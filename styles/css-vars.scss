@@ -1,4 +1,4 @@
-// 字体覆盖
+/* 字体覆盖 */
 :root {
    --va-font-serif: HandWritten; // 各种标题
    // 无衬线字体
@@ -7,7 +7,14 @@
    --smc-font-sans: Seto; // 文章内容
 }
 
+
 /* 侧边栏背景图片 */
 :root {
    --yun-sidebar-bg-img: url("https://www.dstbp.com/images/background/sidebar_bg.webp");
+}
+
+
+/* waline 配置 */
+:root {
+   --waline-font-size: 24px;
 }
