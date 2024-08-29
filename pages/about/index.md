@@ -1,11 +1,5 @@
 ---
-::: zh-CN
 title: 关于我
-:::
-
-::: en
-title: About Me
-:::
 ---
 
 I am developing [Valaxy](https://github.com/YunYouJun/valaxy) - Next Generation Static Blog Framework.
