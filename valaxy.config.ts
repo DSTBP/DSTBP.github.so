@@ -111,6 +111,10 @@ export default defineValaxyConfig<UserThemeConfig>({
         autoplay: false,
         theme: 'var(--hy-c-primary)'
       },
+      options: {
+        autoHidden: false,
+        lyricHidden: true
+      }
     }),
 
     addonAlgolia({
