@@ -3,6 +3,7 @@ import type { UserThemeConfig } from 'valaxy-theme-yun'
 import { addonWaline } from 'valaxy-addon-waline'
 import { addonMeting } from 'valaxy-addon-meting'
 import { addonComponents } from 'valaxy-addon-components'
+import { addonAlgolia } from 'valaxy-addon-algolia'
 
 const safelist = [
   'i-ri-home-line',
@@ -108,7 +109,13 @@ export default defineValaxyConfig<UserThemeConfig>({
         server: 'netease',
         type: 'song',
       },
-    })
+    }),
+
+    addonAlgolia({
+      appId: '6N4FMH5C9G',
+      apiKey: 'ad67ecc301e421f53bac055ff8bc79aa',
+      indexName: 'dstbp-blog',
+    }),
   ],
 
   // 确保指定的图标类不会被 Unocss 优化掉
