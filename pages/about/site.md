@@ -2,6 +2,15 @@
 title: 关于站点
 ---
 
-Valaxy + valaxy-theme-yun Demo Site
+## 我的雾岛 {lang="zh-CN"}
 
-- Default Theme: [valaxy-theme-yun](https://github.com/YunYouJun/valaxy/blob/main/packages/valaxy-theme-yun/)
+::: zh-CN
+...
+:::
+
+## About My Site {lang="en"}
+
+::: en
+...
+:::
+
