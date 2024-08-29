@@ -2,6 +2,7 @@ import { defineValaxyConfig } from 'valaxy'
 import type { UserThemeConfig } from 'valaxy-theme-yun'
 import { addonWaline } from 'valaxy-addon-waline'
 import { addonMeting } from 'valaxy-addon-meting'
+import { addonComponents } from 'valaxy-addon-components'
 
 const safelist = [
   'i-ri-home-line',
@@ -92,6 +93,8 @@ export default defineValaxyConfig<UserThemeConfig>({
 
   // 设置自定义组件
   addons: [
+    addonComponents(),
+
     addonWaline({
       // Waline 配置项，参考 https://waline.js.org/reference/client/props.html
       serverURL: 'https://dstbp-waline.vercel.app/',
