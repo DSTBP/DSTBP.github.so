@@ -112,6 +112,7 @@ export default defineValaxyConfig<UserThemeConfig>({
         theme: 'var(--hy-c-primary)'
       },
       options: {
+        animationIn: true,
         autoHidden: false,
         lyricHidden: true
       }
