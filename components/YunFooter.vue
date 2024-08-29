@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Author: DSTBP
+ * @Date: 2024-08-29 20:43:03
+ * @LastEditTime: 2024-08-29 21:54:05
+ * @LastEditors: DSTBP
+-->
 <script lang="ts" setup>
 import { useScriptTag } from '@vueuse/core'
 import YunFooter from 'valaxy-theme-yun/components/YunFooter.vue'
@@ -17,5 +24,7 @@ useScriptTag('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
             </template>
         </VCLiveTime>
         <div>本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 | 本站访客数 <span id="busuanzi_value_site_uv"></span> 人次</div>
+        <slot />
+        <HairyFootFish />
     </YunFooter>
 </template>
