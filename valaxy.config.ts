@@ -114,7 +114,7 @@ export default defineValaxyConfig<UserThemeConfig>({
       options: {
         animationIn: true,
         // autoHidden: false,
-        // lyricHidden: true
+        lyricHidden: true
       }
     }),
 
