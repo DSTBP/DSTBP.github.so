@@ -2,3 +2,6 @@
 intro:
   desc: Valaxy Template
   hi: Hello, Valaxy!
+
+button:
+  about: About
