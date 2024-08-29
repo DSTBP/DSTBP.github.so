@@ -1,10 +1,3 @@
-<!--
- * @Description: 
- * @Author: DSTBP
- * @Date: 2024-08-29 14:53:09
- * @LastEditTime: 2024-08-29 14:59:31
- * @LastEditors: DSTBP
--->
 <script lang="ts" setup>
 import type { Post } from 'valaxy'
 import { useLayout } from 'valaxy'
