@@ -33,8 +33,8 @@ export default defineValaxyConfig<UserThemeConfig>({
     // background
     bg_image: {
       enable: true,
-      url: 'https://www.dstbp.com/images/background/bg_light.jpg',      // 日间
-      dark: 'https://www.dstbp.com/images/background/bg_dark.jpg',      // 夜间
+      url: 'https://www.dstbp.com/images/background/bg_light.webp',      // 日间
+      dark: 'https://www.dstbp.com/images/background/bg_dark.webp',      // 夜间
       opacity: 0.8,                                                     // 透明度
     },
 
