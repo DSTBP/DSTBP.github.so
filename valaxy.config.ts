@@ -1,6 +1,6 @@
 import { defineValaxyConfig } from 'valaxy'
 import type { UserThemeConfig } from 'valaxy-theme-yun'
-
+import { addonWaline } from 'valaxy-addon-waline'
 
 const safelist = [
   'i-ri-home-line',
@@ -88,6 +88,15 @@ export default defineValaxyConfig<UserThemeConfig>({
       }
     },
   },
+
+  // 设置 valaxy-addon-waline 配置项
+  addons: [
+    addonWaline({
+      // Waline 配置项，参考 https://waline.js.org/reference/client/props.html
+      serverURL: 'https://dstbp-waline.vercel.app/',
+      comment: true,
+    }),
+  ],
 
   // 确保指定的图标类不会被 Unocss 优化掉
   unocss: {
