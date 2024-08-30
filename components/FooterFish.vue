@@ -3,7 +3,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useScriptTag } from '@vueuse/core'
 import { useAppStore } from 'valaxy'
-import { RENDERER } from './HairyFootFish'
+import { RENDERER } from './FooterFish'
 
 const fishContainer = ref()
 
@@ -29,10 +29,10 @@ watch(dark, reset)
 </script>
 
 <template>
-  <div>
+  <div
     id="jsi-flying-fish-container"
     ref="fishContainer"
     class="z-1 relative"
     style="margin-top: -60px;"
-  </div>
+  />
 </template>
