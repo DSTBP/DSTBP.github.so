@@ -1,10 +1,3 @@
-<!--
- * @Description: 
- * @Author: DSTBP
- * @Date: 2024-08-29 20:43:03
- * @LastEditTime: 2024-08-30 09:16:41
- * @LastEditors: DSTBP
--->
 <script lang="ts" setup>
 import { useScriptTag } from '@vueuse/core'
 import YunFooter from 'valaxy-theme-yun/components/YunFooter.vue'
