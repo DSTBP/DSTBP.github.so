@@ -1,5 +1,6 @@
 ---
-title: 我的饭搭子们
+title_zh: 我的饭搭子们
+title_en: My Friend
 date: 2024-08-28 13:00:00
 keywords: 链接
 description: DSTBP的小伙伴们
