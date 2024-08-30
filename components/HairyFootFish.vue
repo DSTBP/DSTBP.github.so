@@ -3,7 +3,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useScriptTag } from '@vueuse/core'
 import { useAppStore } from 'valaxy'
-import { RENDERER } from './FooterFish'
+import { RENDERER } from './HairyFootFish'
 
 const fishContainer = ref()
 
