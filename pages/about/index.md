@@ -1,5 +1,6 @@
 ---
-title: 关于我
+title: About Me
+title_zh: 关于我
 ---
 
 ## 《城南旧事》——关于我 {lang="zh-CN"}
