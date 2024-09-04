@@ -97,7 +97,7 @@ export default defineValaxyConfig<UserThemeConfig>({
     addonComponents(),
 
     addonWaline({
-      serverURL: 'https://dstbp-waline.vercel.app/',
+      serverURL: 'https://waline.dstbp.com/',
       comment: true,
       pageview: true,
     }),
