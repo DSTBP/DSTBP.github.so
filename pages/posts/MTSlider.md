@@ -412,8 +412,6 @@ main();
 ## 3.1 behavior
 断点位置：`'behavior': mH(this[y4d8b_q(0x750)], zQ, this[y4d8b_q(0x398)][y4d8b_q(0x638)])`
 
-![](%E7%BE%8E%E5%9B%A2%E6%99%AE%E9%80%9A%E6%BB%91%E5%9D%97%E8%BD%A8%E8%BF%B9%E6%A8%A1%E6%8B%9F%206cc7bdaabb824063bcc077126d3a9f0f/image%201.png)
-
 ![](https://cdn.nlark.com/yuque/0/2024/png/29548914/1725264685638-8d4788f4-53dc-42ad-a716-2ad3ec90b39f.png)
 
 `mH` 方法传入了三个参数：滑动轨迹，requestCode，false。加密函数有两个：`ms()`、`mm["Kaito"]()`、`md()`。
