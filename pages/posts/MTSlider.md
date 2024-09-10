@@ -1,6 +1,6 @@
 ---
 title_zh: 美团普通滑块轨迹模拟
-title_: MT
+title: MT
 date: 2022-04-01
 updated: 2022-04-01
 categories: Spider
