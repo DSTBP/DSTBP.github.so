@@ -12,7 +12,7 @@ top: 1
 ---
 
 
-# 1. 目标分析
+## 1. 目标分析
 | 相关信息 | 描述 |
 | --- | --- |
 | 目标 | 美团 ebooking 登录普通滑块分析 |
@@ -26,7 +26,7 @@ top: 1
 
 <br>
 
-# 2. 流程分析
+## 2. 流程分析
 F12 定位到接口：[https://epassport.meituan.com/api/account/passwordlogin?yodaReady=h5&csecplatform=4&csecversion=2.4.0](https://epassport.meituan.com/api/account/passwordlogin?yodaReady=h5&csecplatform=4&csecversion=2.4.0)
 
 ```python
@@ -192,7 +192,7 @@ data = {
 
 <br>
 
-# 3. 滑块验证接口
+## 3. 滑块验证接口
 
 
 ```python
@@ -411,7 +411,7 @@ main();
 
 <br>
 
-## 3.1 behavior
+### 3.1 behavior
 
 断点位置：`'behavior': mH(this[y4d8b_q(0x750)], zQ, this[y4d8b_q(0x398)][y4d8b_q(0x638)])`
 
@@ -431,7 +431,7 @@ function mH(zY, zl, zk) {
 
 <br>
 
-### 3.1.1 滑动轨迹
+#### 3.1.1 滑动轨迹
 
 根据控制台输出的结果，需要分析两个参数的生成：`env` 和 `trajectory`。
 
@@ -569,13 +569,13 @@ this["data"]["env"]["Return"] = Number(this["sliderReturn"]["toFixed"](0x0))
 
 <br>
 
-### 3.1.2 request_code
+#### 3.1.2 request_code
 
 request_code 即 https://verify.meituan.com/v2/ext_api/page_data 响应的 request_code。
 
 <br>
 
-### 3.1.3 加密算法
+#### 3.1.3 加密算法
 
 分析完参数，接下来看加密算法：
 
@@ -900,7 +900,7 @@ function setBrowserEnvironment() {
 
 <br>
 
-## 3.2 _token
+### 3.2 _token
 
 断点位置：`zy[y4d8b_q(0x681)] = zG(zV, zF[y4d8b_q(0x459)]())`
 
@@ -910,7 +910,7 @@ function setBrowserEnvironment() {
 
 <br>
 
-### 3.2.1 环境轨迹参数
+#### 3.2.1 环境轨迹参数
 
 ~~~javascript
 zf["reload"] = function () {
@@ -1473,7 +1473,7 @@ var token_data = {
 
 <br>
 
-### 3.2.2 时间戳
+#### 3.2.2 时间戳
 
 `initTimeStamp`、`firstTimeStamp`、`ts`、`cts` 这几个数据的初始化顺序：
 
@@ -1624,7 +1624,7 @@ print([mT[2] + ts for mT in mTs])
 
 <br>
 
-### 3.2.3 zG 加密函数
+#### 3.2.3 zG 加密函数
 
 ```javascript
 zy["_token"] = zG(zV, zF["reload"]())
@@ -1644,7 +1644,7 @@ function mK(zY, zl, zk) {
 
 <br>
 
-## 3.3 其它参数
+### 3.3 其它参数
 
 `TimesTamp`：[page_data](https://verify.meituan.com/v2/ext_api/page_data) 的响应数据中的时间戳。
 
@@ -1753,7 +1753,7 @@ zv["body"]["e4350633"] = zP(zv);
 
 <br>
 
-# 4. 总代码
+## 4. 总代码
 
 ```python
 """
