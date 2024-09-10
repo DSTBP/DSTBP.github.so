@@ -22,8 +22,9 @@ top: 1
 | python lib | loguru==0.7.2、PyExecJS==1.5.1、requests==2.32.3、urllib3==2.2.2 |
 | JS | 20.10.0 |
 
-
 ![](/images/pages/mtslider/img1.png)
+
+<br>
 
 # 2. 流程分析
 F12 定位到接口：[https://epassport.meituan.com/api/account/passwordlogin?yodaReady=h5&csecplatform=4&csecversion=2.4.0](https://epassport.meituan.com/api/account/passwordlogin?yodaReady=h5&csecplatform=4&csecversion=2.4.0)
@@ -188,6 +189,8 @@ data = {
 ```
 
 响应数据中的参数 `session`、`sign`、`request_code`、`timestamp` 后面需要，传给滑块验证接口：[https://verify.meituan.com/v2/ext_api/merchantlogin/verify](https://verify.meituan.com/v2/ext_api/merchantlogin/verify)。
+
+<br>
 
 # 3. 滑块验证接口
 
@@ -406,7 +409,7 @@ function main() {
 main();
 ```
 
-
+<br>
 
 ## 3.1 behavior
 
@@ -426,7 +429,7 @@ function mH(zY, zl, zk) {
 
 ![](/images/pages/mtslider/img3.png)
 
-
+<br>
 
 ### 3.1.1 滑动轨迹
 
@@ -564,13 +567,13 @@ this["data"]["env"]["Return"] = Number(this["sliderReturn"]["toFixed"](0x0))
 }
 ```
 
-
+<br>
 
 ### 3.1.2 request_code
 
 request_code 即 https://verify.meituan.com/v2/ext_api/page_data 响应的 request_code。
 
-
+<br>
 
 ### 3.1.3 加密算法
 
@@ -895,7 +898,7 @@ function setBrowserEnvironment() {
 }
 ```
 
-
+<br>
 
 ## 3.2 _token
 
@@ -905,7 +908,7 @@ function setBrowserEnvironment() {
 
 `zG()` 加密方法传入了两个参数：false，`zF["reload"]()`
 
-
+<br>
 
 ### 3.2.1 环境轨迹参数
 
@@ -1468,7 +1471,7 @@ var token_data = {
 
 经过测试可以得出，重要的参数为 `mT`，其余的 Event 数组参数都可以置空。
 
-
+<br>
 
 ### 3.2.2 时间戳
 
@@ -1619,7 +1622,7 @@ print([mT[2] + ts for mT in mTs])
 # [1724046395004, 1724046394995, 1724046394988, 1724046394980, 1724046394972, 1724046394963, 1724046394958, 1724046394948, 1724046394941, 1724046394931, 1724046394923, 1724046394915, 1724046394908, 1724046394902, 1724046394895, 1724046394883]
 ```
 
-
+<br>
 
 ### 3.2.3 zG 加密函数
 
@@ -1639,7 +1642,7 @@ function mK(zY, zl, zk) {
 
 使用的是和 behavior 一样的加密函数，传入的是明文形式的环境参数和轨迹参数，与 behavior 不同的是传入的 key 直接就是 `request_code`。
 
-
+<br>
 
 ## 3.3 其它参数
 
@@ -1748,9 +1751,9 @@ function zP(zW) {
 zv["body"]["e4350633"] = zP(zv);
 ```
 
+<br>
 
-
-# 5. 总代码
+# 4. 总代码
 
 ```python
 """
