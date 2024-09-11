@@ -54,7 +54,7 @@ export default defineValaxyConfig<UserThemeConfig>({
       {
         name: '大佬博客',
         url: '/study/',
-        icon: 'ri-user-star-line',
+        icon: 'i-ri-user-star-line',
         color: 'hotpink',
       },
     ],
