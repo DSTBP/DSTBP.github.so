@@ -11,8 +11,10 @@ tags:
 top: 1
 ---
 
+## 1. 目标分析 {lang="zh-CN"}
 
-## 1. 目标分析
+::: zh-CN
+
 | 相关信息 | 描述 |
 | --- | --- |
 | 目标 | 美团 ebooking 登录普通滑块分析 |
@@ -22,12 +24,42 @@ top: 1
 | python lib | loguru==0.7.2、PyExecJS==1.5.1、requests==2.32.3、urllib3==2.2.2 |
 | JS | 20.10.0 |
 
+:::
+
+## 1. Target Analysis {lang="en"}
+
+::: en
+
+| Information      | Description                                                  |
+| ---------------- | ------------------------------------------------------------ |
+| Target           | Analysis of Meituan eBooking login slider                    |
+| Website          | https://eb.meituan.com/ebk/login/login.html                  |
+| Browser          | Chrome 127.0.6533.89                                         |
+| Python           | 3.10.7                                                       |
+| Python Libraries | loguru==0.7.2, PyExecJS==1.5.1, requests==2.32.3, urllib3==2.2.2 |
+| JS Version       | 20.10.0                                                      |
+
+:::
+
 ![](/images/pages/mtslider/img1.png)
 
 <br>
 
-## 2. 流程分析
+## 2. 流程分析 {lang="zh-CN"}
+
+::: zh-CN
+
 F12 定位到接口：[https://epassport.meituan.com/api/account/passwordlogin?yodaReady=h5&csecplatform=4&csecversion=2.4.0](https://epassport.meituan.com/api/account/passwordlogin?yodaReady=h5&csecplatform=4&csecversion=2.4.0)
+
+:::
+
+## 2. Process Analysis {lang="en"}
+
+::: en
+
+F12 located the API at: [https://epassport.meituan.com/api/account/passwordlogin?yodaReady=h5&csecplatform=4&csecversion=2.4.0](https://epassport.meituan.com/api/account/passwordlogin?yodaReady=h5&csecplatform=4&csecversion=2.4.0)
+
+:::
 
 ```python
 # -*- coding: utf-8 -*-
@@ -84,7 +116,17 @@ data = {
 response = requests.post('https://epassport.meituan.com/api/account/passwordlogin', headers=headers, params=params, data=data)
 ```
 
+::: zh-CN
+
 经过测试发现 ebooking 登录接口不强校验 mtgisg，简化请求代码：
+
+:::
+
+::: en
+
+Testing revealed that the eBooking login API does not strongly validate `mtgisg`, which simplifies the request code:
+
+:::
 
 ```python
 import requests
@@ -146,7 +188,17 @@ response = requests.post('https://epassport.meituan.com/api/account/passwordlogi
 '''
 ```
 
+::: zh-CN
+
 拿到响应中的 verifyRequestCode 作为参数传给 [https://verify.meituan.com/v2/ext_api/page_data](https://verify.meituan.com/v2/ext_api/page_data)：
+
+:::
+
+::: en
+
+Obtain the `verifyRequestCode` from the response and pass it as a parameter to [https://verify.meituan.com/v2/ext_api/page_data](https://verify.meituan.com/v2/ext_api/page_data):
+
+:::
 
 ```python
 data = {
@@ -188,7 +240,17 @@ data = {
 '''
 ```
 
-响应数据中的参数 `session`、`sign`、`request_code`、`timestamp` 后面需要，传给滑块验证接口：[https://verify.meituan.com/v2/ext_api/merchantlogin/verify](https://verify.meituan.com/v2/ext_api/merchantlogin/verify)。
+::: zh-CN 
+
+响应数据中的参数 session、sign、request_code、timestamp 后面需要，传给滑块验证接口：[https://verify.meituan.com/v2/ext_api/merchantlogin/verify](https://verify.meituan.com/v2/ext_api/merchantlogin/verify)。 
+
+:::
+
+::: en 
+
+The parameters `session`, `sign`, `request_code`, and `timestamp` from the response data are required later and need to be passed to the slider verification interface: [https://verify.meituan.com/v2/ext_api/merchantlogin/verify](https://verify.meituan.com/v2/ext_api/merchantlogin/verify). 
+
+:::
 
 <br>
 
@@ -239,9 +301,21 @@ print(response.text)
 
 ```
 
+::: zh-CN 
+
 需要分析的参数：`behavior`、`_token`、`e4350633`、`Authencation`、`TimesTamp`。生成函数位于 slider.js 文件中。
 
-ast 解混淆：
+ast 解混淆： 
+
+:::
+
+::: en 
+
+Parameters to be analyzed: `behavior`, `_token`, `e4350633`, `Authencation`, `TimesTamp`. The generation function is located in the `slider.js` file.
+
+AST deobfuscation: 
+
+:::
 
 ```javascript
 /*
@@ -413,11 +487,25 @@ main();
 
 ### 3.1 behavior
 
+::: zh-CN
+
 断点位置：`'behavior': mH(this[y4d8b_q(0x750)], zQ, this[y4d8b_q(0x398)][y4d8b_q(0x638)])`
 
 ![](/images/pages/mtslider/img2.png)
 
 `mH` 方法传入了三个参数：滑动轨迹，requestCode，false。加密函数有三个：`ms()`、`mm["Kaito"]()`、`md()`。
+
+:::
+
+::: en
+
+Breakpoint location: `'behavior': mH(this[y4d8b_q(0x750)], zQ, this[y4d8b_q(0x398)][y4d8b_q(0x638)])`
+
+![](/images/pages/mtslider/img2.png)
+
+The `mH` method takes three parameters: the sliding track, `requestCode`, and `false`. There are three encryption functions: `ms()`, `mm["Kaito"]()`, and `md()`.
+
+:::
 
 ```javascript
 function mH(zY, zl, zk) {
@@ -431,9 +519,21 @@ function mH(zY, zl, zk) {
 
 <br>
 
-#### 3.1.1 滑动轨迹
+#### 3.1.1 滑动轨迹 {lang="zh-CN"}
+
+::: zh-CN
 
 根据控制台输出的结果，需要分析两个参数的生成：`env` 和 `trajectory`。
+
+:::
+
+#### 3.1.1 Sliding trajectory {lang="en"}
+
+::: en
+
+Based on the output from the console, the generation of two parameters needs to be analyzed: `env` and `trajectory`. 
+
+:::
 
 **trajectory**
 
@@ -483,13 +583,33 @@ zp["onMove"] = function (zb, zc) {
 }
 ```
 
-在 `zp["moveDrag"]`、`zp["onStart"]` 中下日志断点：
+::: zh-CN 
+
+在 `zp["moveDrag"]`、`zp["onStart"]` 中下日志断点： 
+
+:::
+
+::: en 
+
+Set log breakpoints in `zp["moveDrag"]` and `zp["onStart"]`. 
+
+:::
 
 ```bash
 `point: type: ${zb['type']}, clientX: ${zb['clientX']}, clientY: ${zb['clientY']}, target: `, zb['target']
 ```
 
-发现无日志输出，怀疑 console.log 被 hook 了，新建一个`<iframe>` 元素，将当前 `window` 对象的 `console` 替换成了 iframe 内部的 `console` 对象。“重置”浏览器的 `console` 对象。
+::: zh-CN 
+
+发现无日志输出，怀疑 `console.log` 被 hook 了，新建一个 `<iframe>` 元素，将当前 `window` 对象的 `console` 替换成了 iframe 内部的 `console` 对象。“重置”浏览器的 `console` 对象。 
+
+:::
+
+::: en 
+
+No logs are being output, suspecting that `console.log` has been hooked. Created a new `<iframe>` element and replaced the current `window` object's `console` with the `console` object from the iframe. "Reset" the browser's `console` object. 
+
+:::
 
 ```javascript
 (function(){
@@ -501,7 +621,17 @@ zp["onMove"] = function (zb, zc) {
 
 ![](/images/pages/mtslider/img4.png)
 
-发现 point 是鼠标移动（mousemove 和 mousedown）的轨迹，从点击滑块后开始监听。第一个元素是点击滑块的 Mousedown，后面元素都是 Mousemove。
+::: zh-CN 
+
+发现 `point` 是鼠标移动（`mousemove` 和 `mousedown`）的轨迹，从点击滑块后开始监听。第一个元素是点击滑块的 `mousedown`，后面元素都是 `mousemove`。
+
+:::
+
+::: en 
+
+It was found that `point` represents the mouse movement trajectory (`mousemove` and `mousedown`). Listening starts after clicking the slider. The first element is the `mousedown` event when the slider is clicked, and subsequent elements are `mousemove` events. 
+
+:::
 
 
 
@@ -526,7 +656,17 @@ this["data"]["env"]["Type"] = this["sliderType"]
 this["data"]["env"]["Return"] = Number(this["sliderReturn"]["toFixed"](0x0))
 ```
 
-整个参数的生成：
+::: zh-CN 
+
+整个参数的生成： 
+
+:::
+
+::: en 
+
+Generation of the entire parameter: 
+
+:::
 
 ```json
 {
@@ -571,17 +711,43 @@ this["data"]["env"]["Return"] = Number(this["sliderReturn"]["toFixed"](0x0))
 
 #### 3.1.2 request_code
 
-request_code 即 https://verify.meituan.com/v2/ext_api/page_data 响应的 request_code。
+::: zh-CN 
+
+`request_code` 即 `https://verify.meituan.com/v2/ext_api/page_data` 响应的 `request_code`。 
+
+:::
+
+::: en 
+
+`request_code` is the `request_code` from the response of `https://verify.meituan.com/v2/ext_api/page_data`. 
+
+:::
 
 <br>
 
-#### 3.1.3 加密算法
+#### 3.1.3 加密算法 {lang="zh-CN"}
+
+::: zh-CN 
 
 分析完参数，接下来看加密算法：
 
 `ms` 方法是将 `request_code` 做 base64，并替换编码后的字符串中的 `=` 为 `)`，`+` 为 `(`。
 
-`mm["Kaito"]` 方法是先将传入的 UTF8 字符串转整数数组，然后 TEA 加密，最后 base64 编码，得到 zI。
+`mm["Kaito"]` 方法是先将传入的 UTF8 字符串转整数数组，然后 TEA 加密，最后 base64 编码，得到 `zI`。 
+
+:::
+
+#### 3.1.3 encryption algorithm {lang="en"}
+
+::: en 
+
+After analyzing the parameters, let's look at the encryption algorithms:
+
+The `ms` method base64 encodes the `request_code` and replaces `=` with `)` and `+` with `(` in the encoded string.
+
+The `mm["Kaito"]` method first converts the input UTF-8 string to an integer array, then performs TEA encryption, and finally base64 encodes the result to obtain `zI`. 
+
+:::
 
 ```javascript
 var mX = {};
@@ -706,7 +872,17 @@ var mS = function () {
 }();
 ```
 
-`md()` 方法用 page_data 响应的 sign 和 session 解密出来的 window.f 作为密钥，对 zl 再一次进行 tea 加密，最后进行组合得到 behavior：`window.f + '#' + mm["Kaito"](zJ, window.f)`
+::: zh-CN 
+
+`md()` 方法用 `page_data` 响应的 `sign` 和 `session` 解密出来的 `window.f` 作为密钥，对 `zl` 再一次进行 TEA 加密，最后进行组合得到 `behavior`：`window.f + '#' + mm["Kaito"](zJ, window.f)` 
+
+:::
+
+::: en 
+
+The `md()` method uses `window.f`, decrypted from the `sign` and `session` in the `page_data` response, as the key to perform TEA encryption on `zl` once again. Finally, it combines the result to obtain `behavior`: `window.f + '#' + mm["Kaito"](zJ, window.f)`. 
+
+:::
 
 ```javascript
 var md = function zr(zY, zl) {
@@ -753,7 +929,17 @@ var mA = function zo(zJ, zf) {
 };
 ```
 
-window.f 加密点：
+::: zh-CN 
+
+`window.f` 加密点： 
+
+:::
+
+::: en 
+
+`window.f` encryption point: 
+
+:::
 
 ```javascript
 var mg = function zB() {
@@ -811,7 +997,17 @@ var mE = function zK(zB, zM) {
 };
 ```
 
-解密出来的代码需要补环境运行才能得出正确结果，脚本得到 window.f 的明文：
+::: zh-CN 
+
+解密出来的代码需要补环境运行才能得出正确结果，脚本得到 `window.f` 的明文： 
+
+:::
+
+::: en 
+
+The decrypted code needs to be run in the correct environment to produce accurate results. The script obtains the plaintext of `window.f`: 
+
+:::
 
 ```javascript
 window = global;
@@ -902,15 +1098,31 @@ function setBrowserEnvironment() {
 
 ### 3.2 _token
 
+::: zh-CN
+
 断点位置：`zy[y4d8b_q(0x681)] = zG(zV, zF[y4d8b_q(0x459)]())`
 
 ![](/images/pages/mtslider/img5.png)
 
 `zG()` 加密方法传入了两个参数：false，`zF["reload"]()`
 
+:::
+
+::: en 
+
+Breakpoint location: `zy[y4d8b_q(0x681)] = zG(zV, zF[y4d8b_q(0x459)]())`
+
+![img](/images/pages/mtslider/img5.png)
+
+The `zG()` encryption method takes two parameters: false and `zF["reload"]()`.
+
+:::
+
 <br>
 
-#### 3.2.1 环境轨迹参数
+#### 3.2.1 环境轨迹参数 {lang="zh-CN"}
+
+#### 3.2.1 Env Trajectory Parameters {lang="en"}
 
 ~~~javascript
 zf["reload"] = function () {
@@ -936,11 +1148,25 @@ var zo = function ze(zy) {
 ```
 ~~~
 
+::: zh-CN 
+
 跟到 `zF["reload"]()` 直接分析一下返回值的传参 `zF`：
 
-![](/images/pages/mtslider/img6.png)
+![img](/images/pages/mtslider/img6.png)
 
-分析 `zF`：
+分析 `zF`： 
+
+:::
+
+::: en 
+
+Trace `zF["reload"]()` and directly analyze the returned parameter `zF`:
+
+![img](/images/pages/mtslider/img6.png)
+
+Analyze `zF`: 
+
+:::
 
 ```javascript
 var zf = {
@@ -1166,7 +1392,17 @@ zf['wA'] = ua["getStringHashMD5"]();
 // uY["join"]('') = 'webdriver,__driver_evaluate,__webdriver_evaluate,__selenium_evaluate,__fxdriver_evaluate,__driver_unwrapped,__webdriver_unwrapped,__selenium_unwrapped,__fxdriver_unwrappedwebdriver,_Selenium_IDE_Recorder,_selenium,calledSeleniumdriver-evaluate,webdriver-evaluate,selenium-evaluate,webdriverCommand,webdriver-evaluate-responsewebdriver,__driver_evaluate,__webdriver_evaluate,__selenium_evaluate,__fxdriver_evaluate,__driver_unwrapped,__webdriver_unwrapped,__selenium_unwrapped,__fxdriver_unwrappedwebdriver,_Selenium_IDE_Recorder,_selenium,calledSeleniumdriver-evaluate,webdriver-evaluate,selenium-evaluate,webdriverCommand,webdriver-evaluate-responsewebdriver,__driver_evaluate,__webdriver_evaluate,__selenium_evaluate,__fxdriver_evaluate,__driver_unwrapped,__webdriver_unwrapped,__selenium_unwrapped,__fxdriver_unwrappedwebdriver,_Selenium_IDE_Recorder,_selenium,calledSeleniumdriver-evaluate,webdriver-evaluate,selenium-evaluate,webdriverCommand,webdriver-evaluate-responsewebdriver,__driver_evaluate,__webdriver_evaluate,__selenium_evaluate,__fxdriver_evaluate,__driver_unwrapped,__webdriver_unwrapped,__selenium_unwrapped,__fxdriver_unwrappedwebdriver,_Selenium_IDE_Recorder,_selenium,calledSeleniumdriver-evaluate,webdriver-evaluate,selenium-evaluate,webdriverCommand,webdriver-evaluate-responsewebdriver,__driver_evaluate,__webdriver_evaluate,__selenium_evaluate,__fxdriver_evaluate,__driver_unwrapped,__webdriver_unwrapped,__selenium_unwrapped,__fxdriver_unwrappedwebdriver,_Selenium_IDE_Recorder,_selenium,calledSeleniumdriver-evaluate,webdriver-evaluate,selenium-evaluate,webdriverCommand,webdriver-evaluate-responsewebdriver,__driver_evaluate,__webdriver_evaluate,__selenium_evaluate,__fxdriver_evaluate,__driver_unwrapped,__webdriver_unwrapped,__selenium_unwrapped,__fxdriver_unwrappedwebdriver,_Selenium_IDE_Recorder,_selenium,calledSeleniumdriver-evaluate,webdriver-evaluate,selenium-evaluate,webdriverCommand,webdriver-evaluate-responsewebdriver,__driver_evaluate,__webdriver_evaluate,__selenium_evaluate,__fxdriver_evaluate,__driver_unwrapped,__webdriver_unwrapped,__selenium_unwrapped,__fxdriver_unwrappedwebdriver,_Selenium_IDE_Recorder,_selenium,calledSeleniumdriver-evaluate,webdriver-evaluate,selenium-evaluate,webdriverCommand,webdriver-evaluate-response'
 ```
 
-`fT`、`mT` 为 MouseEvent 监测事件的坐标数组，从点击登录后就开始监听红框内鼠标移动轨迹（mousemove）：
+::: zh-CN
+
+ `fT`、`mT` 为 `MouseEvent` 监测事件的坐标数组，从点击登录后就开始监听红框内鼠标移动轨迹（`mousemove`）：
+
+:::
+
+::: en
+
+ `fT` and `mT` are arrays of coordinates for monitoring `MouseEvent` events. The tracking of mouse movement within the red box (`mousemove`) starts after clicking login: 
+
+:::
 
 ![](/images/pages/mtslider/img7.png)
 
@@ -1314,7 +1550,17 @@ var zs = function zI(zv) {
 ],
 ```
 
-`buttons`（处理点击 BUTTON）
+::: zh-CN
+
+ `buttons`（处理点击 BUTTON） 
+
+:::
+
+::: en
+
+ `buttons` (handles clicking BUTTON) 
+
+:::
 
 ```javascript
 var zW = zV["target"];
@@ -1349,7 +1595,17 @@ if (zW["nodeName"] && zW["nodeName"] === "BUTTON") {
 ]
 ```
 
-整个参数的生成：
+::: zh-CN
+
+ 整个参数的生成： 
+
+:::
+
+::: en
+
+ Generation of the entire parameter: 
+
+:::
 
 ```javascript
 var token_data = {
@@ -1469,13 +1725,35 @@ var token_data = {
 }
 ```
 
-经过测试可以得出，重要的参数为 `mT`，其余的 Event 数组参数都可以置空。
+::: zh-CN
+
+ 经过测试可以得出，重要的参数为 `mT`，其余的 Event 数组参数都可以置空。 
+
+:::
+
+::: en
+
+ After testing, it can be concluded that the important parameter is `mT`, and the remaining Event array parameters can be set to empty. 
+
+:::
 
 <br>
 
-#### 3.2.2 时间戳
+#### 3.2.2 时间戳 {lang="zh-CN"}
 
-`initTimeStamp`、`firstTimeStamp`、`ts`、`cts` 这几个数据的初始化顺序：
+#### 3.2.2 Timestamp {lang="en"}
+
+::: zh-CN
+
+ `initTimeStamp`、`firstTimeStamp`、`ts`、`cts` 这几个数据的初始化顺序： 
+
+:::
+
+::: en
+
+The initialization order of the data `initTimeStamp`, `firstTimeStamp`, `ts`, and `cts`: 
+
+:::
 
 ```javascript
 XC['ts'] -> zf['ts'] -> zf['cts'] -> initTimeStamp
@@ -1504,11 +1782,25 @@ function zW(zt) {
 !zp[y4d8b_q(0x79a)] && (zp[y4d8b_q(0x79a)] = Date[y4d8b_q(0x7a5)]());
 ```
 
-初始化后，`initTimeStamp`、`firstTimeStamp` 不变：
+::: zh-CN
 
-![](/images/pages/mtslider/img11.png)
+ 初始化后，`initTimeStamp`、`firstTimeStamp` 不变：
 
-ts 和 cts 在初始化后会更新时间戳：
+![img](/images/pages/mtslider/img11.png)
+
+`ts` 和 `cts` 在初始化后会更新时间戳： 
+
+:::
+
+::: en
+
+After initialization, `initTimeStamp` and `firstTimeStamp` remain unchanged:
+
+![img](/images/pages/mtslider/img11.png)
+
+`ts` and `cts` will update their timestamps after initialization: 
+
+:::
 
 ```javascript
 zf["reload"] = function () {
@@ -1520,14 +1812,31 @@ zf["reload"] = function () {
 
 ![](/images/pages/mtslider/img12.png)
 
-**总流程：**
+::: zh-CN
 
-- 输入账密 → 首次点击登录 → XC['ts'] → zf['ts']、zf['cts'] → initTimeStamp → 点击滑块 → firstTimeStamp → zf['cts'] 更新、zf['ts'] = XC['ts']
-- 再次点击登录 → zf['ts']、zf['cts'] → initTimeStamp → 点击滑块 → firstTimeStamp → zf['cts'] 更新、zf['ts'] = XC['ts']
+ **总流程：**
 
-`mT` 时间差使用的是 XC['ts']，point 时间差使用的是 initTimeStamp。
+- 输入账密 → 首次点击登录 → `XC['ts']` → `zf['ts']`、`zf['cts']` → `initTimeStamp` → 点击滑块 → `firstTimeStamp` → `zf['cts']` 更新、`zf['ts'] = XC['ts']`
+- 再次点击登录 → `zf['ts']`、`zf['cts']` → `initTimeStamp` → 点击滑块 → `firstTimeStamp` → `zf['cts']` 更新、`zf['ts'] = XC['ts']`
 
-再进行分析，得到时间差相关联系：
+`mT` 时间差使用的是 `XC['ts']`，`point` 时间差使用的是 `initTimeStamp`。
+
+再进行分析，得到时间差相关联系： 
+
+:::
+
+::: en
+
+ **Overall Flow:**
+
+- Enter username and password → First click login → `XC['ts']` → `zf['ts']`, `zf['cts']` → `initTimeStamp` → Click the slider → `firstTimeStamp` → `zf['cts']` updated, `zf['ts'] = XC['ts']`
+- Click login again → `zf['ts']`, `zf['cts']` → `initTimeStamp` → Click the slider → `firstTimeStamp` → `zf['cts']` updated, `zf['ts'] = XC['ts']`
+
+The time difference for `mT` uses `XC['ts']`, while the time difference for `point` uses `initTimeStamp`.
+
+Further analysis reveals the relationship related to time differences: 
+
+:::
 
 ```javascript
 behavior = {
@@ -1569,7 +1878,17 @@ _token = {
 }
 ```
 
-`_token` 的 `ts` 和轨迹时间差要与 `behavior` 的 Timestamp 的 `initTimeStamp` 和轨迹时间差同步。
+::: zh-CN
+
+ `_token` 的 `ts` 和轨迹时间差要与 `behavior` 的 `Timestamp` 的 `initTimeStamp` 和轨迹时间差同步。 
+
+:::
+
+::: en
+
+ The `ts` and trajectory time difference of `_token` must be synchronized with the `initTimeStamp` and trajectory time difference of the `Timestamp` in `behavior`. 
+
+:::
 
 ```python
 points = [
@@ -1624,7 +1943,9 @@ print([mT[2] + ts for mT in mTs])
 
 <br>
 
-#### 3.2.3 zG 加密函数
+#### 3.2.3 zG 加密函数 {lang="zh-CN"}
+
+#### 3.2.3 zG encryption function {lang="en"}
 
 ```javascript
 zy["_token"] = zG(zV, zF["reload"]())
@@ -1640,15 +1961,37 @@ function mK(zY, zl, zk) {
 }
 ```
 
-使用的是和 behavior 一样的加密函数，传入的是明文形式的环境参数和轨迹参数，与 behavior 不同的是传入的 key 直接就是 `request_code`。
+::: zh-CN
+
+ 使用的是和 `behavior` 一样的加密函数，传入的是明文形式的环境参数和轨迹参数，与 `behavior` 不同的是传入的 key 直接就是 `request_code`。 
+
+:::
+
+::: en
+
+ The same encryption function as `behavior` is used, with plaintext environment parameters and trajectory parameters passed in. The difference from `behavior` is that the key passed in is directly the `request_code`. 
+
+:::
 
 <br>
 
-### 3.3 其它参数
+### 3.3 其它参数 {lang="zh-CN"}
 
-`TimesTamp`：[page_data](https://verify.meituan.com/v2/ext_api/page_data) 的响应数据中的时间戳。
+### 3.3 other parameters {lang="en"}
 
-`Authencation`
+::: zh-CN 
+
+`TimesTamp`：[page_data](https://verify.meituan.com/v2/ext_api/page_data) 的响应数据中的时间戳。 
+
+:::
+
+::: en
+
+`TimesTamp`: The timestamp from the response data of [page_data](https://verify.meituan.com/v2/ext_api/page_data). 
+
+:::
+
+**Authencation**
 
 ```javascript
 // 提取 body 参数，先排序再转换为 URL 参数的格式
@@ -1701,7 +2044,17 @@ zy["Authencation"] = De(zb);
 zy["TimesTamp"] = '' + zG;    // zG = [page_data](<https://verify.meituan.com/v2/ext_api/page_data>) 的响应数据中的时间戳
 ```
 
-通过打断点分析，发现这里的 zG 就是 [page_data](https://verify.meituan.com/v2/ext_api/page_data) 的响应数据中的时间戳。而 zt 是我们 [verify](https://verify.meituan.com/v2/ext_api/merchantlogin/verify) 的请求体以及环境参数，然后对其做了一系列 hash 算法得到 `Authencation`：
+::: zh-CN
+
+通过打断点分析，发现这里的 `zG` 就是 [page_data](https://verify.meituan.com/v2/ext_api/page_data) 的响应数据中的时间戳。而 `zt` 是我们 [verify](https://verify.meituan.com/v2/ext_api/merchantlogin/verify) 的请求体以及环境参数，然后对其做了一系列 hash 算法得到 `Authencation`： 
+
+:::
+
+::: en 
+
+Through breakpoint analysis, it was found that `zG` is the timestamp from the response data of [page_data](https://verify.meituan.com/v2/ext_api/page_data). `zt` represents the request body and environment parameters of our [verify](https://verify.meituan.com/v2/ext_api/merchantlogin/verify), and a series of hash algorithms are applied to it to obtain `Authencation`: 
+
+:::
 
 ```python
 dic = {
@@ -1740,7 +2093,17 @@ def gen_Authencation(dic, ts):
     return md5(md5(sha512(sha256(sha256(res)))))
 ```
 
-`e4350653`：request_code 截取索引 15-23 的字符串。
+::: zh-CN 
+
+`e4350653`：`request_code` 截取索引 15-23 的字符串。 
+
+:::
+
+::: en 
+
+`e4350653`: The substring from index 15 to 23 of `request_code`.
+
+:::
 
 ```javascript
 function zP(zW) {
@@ -1753,7 +2116,9 @@ zv["body"]["e4350633"] = zP(zv);
 
 <br>
 
-## 4. 总代码
+## 4. 总代码 {lang="zh-CN"}
+
+## 4. Total Code {lang="en"}
 
 ```python
 """
