@@ -1,0 +1,26 @@
+[
+    {
+        "url": "https://blog.lleavesg.top/",
+        "avatar": "https://www.notion.so/icons/leaf_green.svg?t=71117ce5-a899-4a5e-8d77-06c090bf6509",
+        "name": "LLeaves",
+        "blog": "LLeaves`s blog",
+        "desc": "Android 安全，漏洞研究，flutter逆向",
+        "color": "#90A6BC"
+    },
+    {
+        "url": "https://cx330.tw/",
+        "avatar": "https://blog.cx330.tw/assets/me.jpg",
+        "name": "CX330",
+        "blog": "cx330`s blog",
+        "desc": "PWN 密码学 CTFer",
+        "color": "#C24964"
+    },
+    {
+        "url": "https://rickliu.com/",
+        "avatar": "https://r1ck-blog.oss-cn-shenzhen.aliyuncs.com/avatar.jpg",
+        "name": "R1ck",
+        "blog": "R1ck's Portal",
+        "desc": "密码学，人工智能，机器学习",
+        "color": "#4186C2"
+    },
+]
