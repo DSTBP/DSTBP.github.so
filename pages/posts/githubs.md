@@ -1,6 +1,6 @@
 ---
-title: Favorite articles
-title_zh: 收藏文章
+title: Favorite github project
+title_zh: 优秀 github 项目
 date: 2024-08-01
 updated: 2024-08-01
 categories: 笔记
