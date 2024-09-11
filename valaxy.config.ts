@@ -52,8 +52,8 @@ export default defineValaxyConfig<UserThemeConfig>({
         color: 'dodgerblue',
       },
       {
-        name: '赞助老板',
-        url: '/sponsor/',
+        name: '大佬博客',
+        url: '/study/',
         icon: 'i-ri-user-heart-line',
         color: 'hotpink',
       },
