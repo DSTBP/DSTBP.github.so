@@ -2,7 +2,7 @@
 title_zh: 美团普通滑块轨迹模拟
 title: Trajectory simulation of Meituan slider
 date: 2024-09-08 13:00:00
-updated: 2022-09-08 13:00:00
+updated: 2024-09-08 13:00:00
 comments: true
 categories: Spider
 tags:
@@ -254,7 +254,9 @@ The parameters `session`, `sign`, `request_code`, and `timestamp` from the respo
 
 <br>
 
-## 3. 滑块验证接口
+## 3. 滑块验证接口 {lang="zh-CN"}
+
+## 3. Slider verification interface {lang="en"}
 
 
 ```python
