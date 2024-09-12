@@ -25,10 +25,18 @@
     },
     {
         "url": "https://space.bilibili.com/137703336",
-        "avatar": "https://i0.hdslb.com/bfs/face/4704399bdb58e5174c1d972c67fb975ca94fc25f.jpg",
+        "avatar": "https://www.worldgirl.net/image/cache/catalog/img/41K/41KrUD1fqcL._AC_-500x500w.jpg",
         "name": "白嫖界大拿",
         "blog": "白嫖界大拿",
         "desc": "不定期更新加密与解密相关的视频",
         "color": "#98FB98"
+    },
+    {
+        "url": "https://oacia.dev/",
+        "avatar": "https://oacia.dev/images/favicon.ico",
+        "name": "oacia",
+        "blog": "oacia`s blog",
+        "desc": "Android 逆向，native 逆向",
+        "color": "#FF97B8"
     }
 ]
