@@ -22,5 +22,13 @@
         "blog": "R1ck's Portal",
         "desc": "密码学，人工智能，机器学习",
         "color": "#4186C2"
+    },
+    {
+        "url": "https://space.bilibili.com/137703336",
+        "avatar": "https://i0.hdslb.com/bfs/face/4704399bdb58e5174c1d972c67fb975ca94fc25f.jpg",
+        "name": "白嫖界大拿",
+        "blog": "白嫖界大拿",
+        "desc": "不定期更新加密与解密相关的视频",
+        "color": "#98FB98"
     }
 ]
