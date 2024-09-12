@@ -1,0 +1,42 @@
+[
+    {
+        "url": "https://s0rry.cn/",
+        "avatar": "https://www.nssctf.cn/files/2024/2/20/61bc635593.jpeg",
+        "name": "s0rry",
+        "blog": "s0rry`s blog",
+        "desc": "Hello,world. l'm coming.",
+        "color": "#90A6BC"
+    },
+    {
+        "url": "https://www.yuque.com/misery333",
+        "avatar": "https://avatars.githubusercontent.com/u/87843973?v=4",
+        "name": "M1sery",
+        "blog": "M1sery的博客",
+        "desc": "十一点钟 皓月升空 夜色坠落",
+        "color": "#C24964"
+    },
+    {
+        "url": "https://hybpjx.github.io/",
+        "avatar": "https://zichliang.top/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fhttps%253A%252F%252Fprod-files-secure.s3.us-west-2.amazonaws.com%252Fb41bc7f5-89c6-4cb6-91a0-1e12608041ec%252Fe987a041-b658-4335-b3ad-7bc0f1653640%252F20220610070918_e08ad.jpeg%3Ftable%3Dblock%26id%3D9674c052-f4fa-433b-9773-0bd679364fce%26cache%3Dv2&w=2048&q=75",
+        "name": "流转",
+        "blog": "流转's 博客",
+        "desc": "我是始識，也是影17",
+        "color": "#4186C2"
+    },
+    {
+        "url": "https://l-kook.github.io/",
+        "avatar": "https://l-kook.github.io/image/avatar.jpeg",
+        "name": "l-kook",
+        "blog": "l-kookの小窝",
+        "desc": "纯算大神是谁，哦？原来是我",
+        "color": "#00F5FF"
+    },
+    {
+        "url": "https://lpy30m.github.io/skuukzky.github.io/",
+        "avatar": "https://krseoul.imgtbl.com/i/2024/08/23/66c803b67ebec.jpg",
+        "name": "skuukzky",
+        "blog": "skuukzky 的杂货店",
+        "desc": "六边形战士",
+        "color": "#66CCFF"
+    }
+]

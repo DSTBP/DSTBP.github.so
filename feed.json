@@ -1,0 +1,38 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "微澜尘寰 の Blog",
+    "home_page_url": "https://www.dstbp.cn/",
+    "feed_url": "https://www.dstbp.cn/feed.json",
+    "description": "你恳求世界不要打扰你的独处，在夜幕降临的时候却又非常孤独。",
+    "icon": "https://www.dstbp.com/images/author/logo.jpg",
+    "author": {
+        "name": "r0xanne",
+        "url": "https://valaxy.site"
+    },
+    "items": [
+        {
+            "id": "",
+            "content_html": "<h2>Valaxy</h2>\n<p>Next Generation Static Blog Framework.</p>\n<p>Write your first post!</p>\n<h2>Usage</h2>\n<p>Modify `valaxy</p>\n<br/><p>访问 <a href=\"https://www.dstbp.cn/posts/articles\" target=\"_blank\">https://www.dstbp.cn/posts/articles</a> 阅读全文。</p>",
+            "url": "https://www.dstbp.cn/posts/articles",
+            "title": "Favorite articles",
+            "date_modified": "2024-08-01T00:00:00.000Z",
+            "date_published": "2024-08-01T00:00:00.000Z",
+            "author": {
+                "name": "r0xanne",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>Valaxy</h2>\n<p>Next Generation Static Blog Framework.</p>\n<p>Write your first post!</p>\n<h2>Usage</h2>\n<p>Modify `valaxy</p>\n<br/><p>访问 <a href=\"https://www.dstbp.cn/posts/githubs\" target=\"_blank\">https://www.dstbp.cn/posts/githubs</a> 阅读全文。</p>",
+            "url": "https://www.dstbp.cn/posts/githubs",
+            "title": "Favorite github project",
+            "date_modified": "2024-08-01T00:00:00.000Z",
+            "date_published": "2024-08-01T00:00:00.000Z",
+            "author": {
+                "name": "r0xanne",
+                "url": "https://valaxy.site"
+            }
+        }
+    ]
+}
