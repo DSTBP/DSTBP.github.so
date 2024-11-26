@@ -38,5 +38,13 @@
         "blog": "oacia`s blog",
         "desc": "Android 逆向，native 逆向",
         "color": "#FF97B8"
+    },
+    {
+        "url": "https://www.cnblogs.com/mumuhhh",
+        "avatar": "https://pic.cnblogs.com/face/3167109/20230809145625.png",
+        "name": "沐小琪",
+        "blog": "Kicky_Mu`s blog",
+        "desc": "N0wayBack Crypto、Misc手",
+        "color": "#FF97B8"
     }
 ]
