@@ -45,6 +45,14 @@
         "name": "沐小琪",
         "blog": "_沐小琪_",
         "desc": "N0wayBack Crypto、Misc手",
-        "color": "#FF97B8"
-    }
+        "color": "#2581de"
+    },
+    {
+        "url": "https://www.leku.blog/",
+        "avatar": "https://dstbp.com/images/friends/studies/leku.png",
+        "name": "LeKu",
+        "blog": "LeKu",
+        "desc": "密码学、区块链",
+        "color": "#fe105a"
+    },
 ]
