@@ -54,5 +54,13 @@
         "blog": "LeKu",
         "desc": "密码学、区块链",
         "color": "#fe105a"
+    },
+    {
+        "url": "https://www.cnblogs.com/informatics",
+        "avatar": "https://dstbp.com/images/friends/studies/warm3snow.jpg",
+        "name": "warm3snow",
+        "blog": "warm3snow-博客园",
+        "desc": "密码技术产生背景、重要性、以及发展阶段 现代密码体系 数字证书 数字信封 密钥协商",
+        "color": "#9d57d0"
     }
 ]
