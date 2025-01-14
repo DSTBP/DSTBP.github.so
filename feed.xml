@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>微澜尘寰 の Blog</title>
+        <link>https://www.dstbp.cn/</link>
+        <description>你恳求世界不要打扰你的独处，在夜幕降临的时候却又非常孤独。</description>
+        <lastBuildDate>Tue, 14 Jan 2025 09:07:34 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>微澜尘寰 の Blog</title>
+            <url>https://www.dstbp.com/images/author/logo.jpg</url>
+            <link>https://www.dstbp.cn/</link>
+        </image>
+        <copyright>CC BY-NC-SA 4.0 2025 © r0xanne</copyright>
+        <atom:link href="https://www.dstbp.cn/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Favorite articles]]></title>
+            <link>https://www.dstbp.cn/posts/articles</link>
+            <guid>https://www.dstbp.cn/posts/articles</guid>
+            <pubDate>Thu, 01 Aug 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Valaxy</h2>
+<p>Next Generation Static Blog Framework.</p>
+<p>Write your first post!</p>
+<h2>Usage</h2>
+<p>Modify `valaxy</p>
+<br/><p>访问 <a href="https://www.dstbp.cn/posts/articles" target="_blank">https://www.dstbp.cn/posts/articles</a> 阅读全文。</p>]]></content:encoded>
+            <author>i@valaxy.site (r0xanne)</author>
+        </item>
+        <item>
+            <title><![CDATA[Favorite github project]]></title>
+            <link>https://www.dstbp.cn/posts/githubs</link>
+            <guid>https://www.dstbp.cn/posts/githubs</guid>
+            <pubDate>Thu, 01 Aug 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Valaxy</h2>
+<p>Next Generation Static Blog Framework.</p>
+<p>Write your first post!</p>
+<h2>Usage</h2>
+<p>Modify `valaxy</p>
+<br/><p>访问 <a href="https://www.dstbp.cn/posts/githubs" target="_blank">https://www.dstbp.cn/posts/githubs</a> 阅读全文。</p>]]></content:encoded>
+            <author>i@valaxy.site (r0xanne)</author>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,74 @@
+[
+    {
+        "url": "https://blog.lleavesg.top/",
+        "avatar": "https://www.notion.so/icons/leaf_green.svg?t=71117ce5-a899-4a5e-8d77-06c090bf6509",
+        "name": "LLeaves",
+        "blog": "LLeaves`s blog",
+        "desc": "Android 安全，漏洞研究，flutter逆向",
+        "color": "#90A6BC"
+    },
+    {
+        "url": "https://cx330.tw/",
+        "avatar": "https://blog.cx330.tw/assets/me.jpg",
+        "name": "CX330",
+        "blog": "cx330`s blog",
+        "desc": "PWN 密码学 CTFer",
+        "color": "#C24964"
+    },
+    {
+        "url": "https://rickliu.com/",
+        "avatar": "https://r1ck-blog.oss-cn-shenzhen.aliyuncs.com/avatar.jpg",
+        "name": "R1ck",
+        "blog": "R1ck's Portal",
+        "desc": "密码学，人工智能，机器学习",
+        "color": "#4186C2"
+    },
+    {
+        "url": "https://space.bilibili.com/137703336",
+        "avatar": "https://www.worldgirl.net/image/cache/catalog/img/41K/41KrUD1fqcL._AC_-500x500w.jpg",
+        "name": "白嫖界大拿",
+        "blog": "白嫖界大拿",
+        "desc": "不定期更新加密与解密相关的视频",
+        "color": "#98FB98"
+    },
+    {
+        "url": "https://oacia.dev/",
+        "avatar": "https://oacia.dev/images/favicon.ico",
+        "name": "oacia",
+        "blog": "oacia`s blog",
+        "desc": "Android 逆向，native 逆向",
+        "color": "#FF97B8"
+    },
+    {
+        "url": "https://www.cnblogs.com/mumuhhh",
+        "avatar": "https://dstbp.com/images/friends/studies/Kicky_Mu.jpg",
+        "name": "沐小琪",
+        "blog": "_沐小琪_",
+        "desc": "N0wayBack Crypto、Misc手",
+        "color": "#2581de"
+    },
+    {
+        "url": "https://www.leku.blog/",
+        "avatar": "https://dstbp.com/images/friends/studies/leku.png",
+        "name": "LeKu",
+        "blog": "LeKu",
+        "desc": "密码学、区块链",
+        "color": "#fe105a"
+    },
+    {
+        "url": "https://aandds.com/",
+        "avatar": "https://dstbp.com/images/friends/studies/aandds.ico",
+        "name": "aandds",
+        "blog": "cig01`s blog",
+        "desc": "密码学、区块链、冷知识证明、秘密共享",
+        "color": "#6cf0af"
+    },
+    {
+        "url": "https://www.cnblogs.com/informatics",
+        "avatar": "https://dstbp.com/images/friends/studies/warm3snow.jpg",
+        "name": "warm3snow",
+        "blog": "warm3snow-博客园",
+        "desc": "密码技术产生背景、重要性、以及发展阶段 现代密码体系 数字证书 数字信封 密钥协商",
+        "color": "#9d57d0"
+    }
+]
